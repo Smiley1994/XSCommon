@@ -27,9 +27,9 @@ class ANN9PostDevice: NSObject {
         }
         
         
-        let url = URL(string: IDFAURL)
+        let url = URL(string: "")
         var request = URLRequest(url: url!)
-        
+
         var jsonData = Data()
         do {
             let data = try JSONSerialization.data(withJSONObject: dictionaryInfo, options: JSONSerialization.WritingOptions.prettyPrinted)
@@ -37,10 +37,10 @@ class ANN9PostDevice: NSObject {
         } catch  {
             print(jsonData)
         }
-        
+
         request.httpMethod = "POST"
         request.httpBody = jsonData
-        
+
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request)
         dataTask.resume()
@@ -54,7 +54,7 @@ class ANN9PostDevice: NSObject {
         let uuid = UUID().uuidString
         dictionaryInfo.setValue(uuid, forKey: "UUID")
         
-        dictionaryInfo.setValue(ProjectId, forKey: "pid")
+//        dictionaryInfo.setValue(ProjectId, forKey: "pid")
         
         dictionaryInfo.setValue(String().date(), forKey: "deviceDate")
         
@@ -97,8 +97,8 @@ class ANN9PostDevice: NSObject {
         
         dictionaryInfo.setValue(iphoneType(), forKey: "Platform")
         
-        dictionaryInfo.setValue(ScreenWidth, forKey: "screenWidth")
-        dictionaryInfo.setValue(ScreenHeight, forKey: "screenHeight")
+//        dictionaryInfo.setValue(ScreenWidth, forKey: "screenWidth")
+//        dictionaryInfo.setValue(ScreenHeight, forKey: "screenHeight")
         
     }
     
@@ -139,6 +139,11 @@ class ANN9PostDevice: NSObject {
         return tempString
     }
     
+    class func getIdfa() -> String {
+        let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+        return idfa
+    }
+    
     class func iphoneType() ->String {
         
         var systemInfo = utsname()
@@ -176,3 +181,5 @@ class ANN9PostDevice: NSObject {
         return platform
     }
 }
+
+
