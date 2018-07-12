@@ -16,6 +16,7 @@
 		5F18164820F75A7A00D631B6 /* XSIQiYiPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F18164220F751FB00D631B6 /* XSIQiYiPlayButton.swift */; };
 		5F18164B20F76E4500D631B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51558420EC741A003230D9 /* ViewController.swift */; };
 		5F18165620F781C200D631B6 /* XSCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0E223A20E91BF000095979 /* XSCommon.framework */; };
+		5F18165B20F783DB00D631B6 /* XSTestButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F18165A20F783DB00D631B6 /* XSTestButton.swift */; };
 		5F51558320EC741A003230D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51558220EC741A003230D9 /* AppDelegate.swift */; };
 		5F51558820EC741A003230D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F51558620EC741A003230D9 /* Main.storyboard */; };
 		5F51558A20EC741B003230D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F51558920EC741B003230D9 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		5F0E224A20E91DD800095979 /* XSExtension+NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XSExtension+NSObject.swift"; sourceTree = "<group>"; };
 		5F0E225920E942B800095979 /* XSScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSScanViewController.swift; sourceTree = "<group>"; };
 		5F18164220F751FB00D631B6 /* XSIQiYiPlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XSIQiYiPlayButton.swift; sourceTree = "<group>"; };
+		5F18165A20F783DB00D631B6 /* XSTestButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSTestButton.swift; sourceTree = "<group>"; };
 		5F51558020EC741A003230D9 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F51558220EC741A003230D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F51558420EC741A003230D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				5F18164220F751FB00D631B6 /* XSIQiYiPlayButton.swift */,
+				5F18165A20F783DB00D631B6 /* XSTestButton.swift */,
 			);
 			path = UIUtils;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F18165B20F783DB00D631B6 /* XSTestButton.swift in Sources */,
 				5F0E225A20E942B800095979 /* XSScanViewController.swift in Sources */,
 				5F0E224920E91DCA00095979 /* XSExtension+UI.swift in Sources */,
 				5F51559320EC788A003230D9 /* XSScanBackgroundView.swift in Sources */,
