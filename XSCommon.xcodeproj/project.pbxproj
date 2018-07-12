@@ -15,6 +15,7 @@
 		5F18164320F751FC00D631B6 /* XSIQiYiPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F18164220F751FB00D631B6 /* XSIQiYiPlayButton.swift */; };
 		5F18164820F75A7A00D631B6 /* XSIQiYiPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F18164220F751FB00D631B6 /* XSIQiYiPlayButton.swift */; };
 		5F18164B20F76E4500D631B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51558420EC741A003230D9 /* ViewController.swift */; };
+		5F18165620F781C200D631B6 /* XSCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0E223A20E91BF000095979 /* XSCommon.framework */; };
 		5F51558320EC741A003230D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51558220EC741A003230D9 /* AppDelegate.swift */; };
 		5F51558820EC741A003230D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F51558620EC741A003230D9 /* Main.storyboard */; };
 		5F51558A20EC741B003230D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F51558920EC741B003230D9 /* Assets.xcassets */; };
@@ -85,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F18165620F781C200D631B6 /* XSCommon.framework in Frameworks */,
 				5FC33D5B20F3177500FED5E8 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
