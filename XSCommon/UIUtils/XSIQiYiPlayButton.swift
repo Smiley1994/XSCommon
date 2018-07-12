@@ -22,7 +22,7 @@ let TriangleAnimation = "TriangleAnimation"
 let RightLineAnimation = "RightLineAnimation"
 
 
-class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
+public class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
 
     var buttonStatus : IQiYiPlayStatus! {
         didSet {
@@ -217,7 +217,7 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
     }
     
     //MARK: 动画 开始，结束代理方法
-    internal func animationDidStart(_ anim: CAAnimation) {
+    public func animationDidStart(_ anim: CAAnimation) {
         let name = anim.value(forKey: "animationName") as! String
         if name == TriangleAnimation {
             triangleLayer.lineCap = kCALineCapRound
@@ -226,7 +226,7 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
         }
     }
     
-    internal func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+    public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         let name = anim.value(forKey: "animationName") as! String
         if buttonStatus == IQiYiPlayStatus.IQiYiPlayStatusPlay && name == RightLineAnimation {
             rightLineLayer.lineCap = kCALineCapButt
@@ -320,7 +320,7 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
     }
     
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
