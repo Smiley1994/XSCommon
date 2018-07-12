@@ -12,6 +12,11 @@
 		5F0E224920E91DCA00095979 /* XSExtension+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E224820E91DCA00095979 /* XSExtension+UI.swift */; };
 		5F0E224B20E91DD800095979 /* XSExtension+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E224A20E91DD800095979 /* XSExtension+NSObject.swift */; };
 		5F0E225A20E942B800095979 /* XSScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E225920E942B800095979 /* XSScanViewController.swift */; };
+		5F18164320F751FC00D631B6 /* XSIQiYiPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F18164220F751FB00D631B6 /* XSIQiYiPlayButton.swift */; };
+		5F18164420F7520A00D631B6 /* XSIQiYiPlayButton.swift in Headers */ = {isa = PBXBuildFile; fileRef = 5F18164220F751FB00D631B6 /* XSIQiYiPlayButton.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F18164520F7521F00D631B6 /* XSExtesion+String.swift in Headers */ = {isa = PBXBuildFile; fileRef = 5F0E224620E91DB900095979 /* XSExtesion+String.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F18164620F7522200D631B6 /* XSExtension+UI.swift in Headers */ = {isa = PBXBuildFile; fileRef = 5F0E224820E91DCA00095979 /* XSExtension+UI.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F18164720F7522600D631B6 /* XSExtension+NSObject.swift in Headers */ = {isa = PBXBuildFile; fileRef = 5F0E224A20E91DD800095979 /* XSExtension+NSObject.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F51558320EC741A003230D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51558220EC741A003230D9 /* AppDelegate.swift */; };
 		5F51558520EC741A003230D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51558420EC741A003230D9 /* ViewController.swift */; };
 		5F51558820EC741A003230D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F51558620EC741A003230D9 /* Main.storyboard */; };
@@ -57,6 +62,7 @@
 		5F0E224820E91DCA00095979 /* XSExtension+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XSExtension+UI.swift"; sourceTree = "<group>"; };
 		5F0E224A20E91DD800095979 /* XSExtension+NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XSExtension+NSObject.swift"; sourceTree = "<group>"; };
 		5F0E225920E942B800095979 /* XSScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSScanViewController.swift; sourceTree = "<group>"; };
+		5F18164220F751FB00D631B6 /* XSIQiYiPlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XSIQiYiPlayButton.swift; sourceTree = "<group>"; };
 		5F51558020EC741A003230D9 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F51558220EC741A003230D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F51558420EC741A003230D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +123,7 @@
 		5F0E223C20E91BF000095979 /* XSCommon */ = {
 			isa = PBXGroup;
 			children = (
+				5F18164120F74FC500D631B6 /* UIUtils */,
 				5FC33D5120F3118700FED5E8 /* Keychain */,
 				5F0E225820E9429C00095979 /* ScanView */,
 				5F0E224520E91C4200095979 /* XSExtension */,
@@ -144,6 +151,14 @@
 				5F51559220EC788A003230D9 /* XSScanBackgroundView.swift */,
 			);
 			path = ScanView;
+			sourceTree = "<group>";
+		};
+		5F18164120F74FC500D631B6 /* UIUtils */ = {
+			isa = PBXGroup;
+			children = (
+				5F18164220F751FB00D631B6 /* XSIQiYiPlayButton.swift */,
+			);
+			path = UIUtils;
 			sourceTree = "<group>";
 		};
 		5F51558120EC741A003230D9 /* Sample */ = {
@@ -185,6 +200,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F0E223F20E91BF000095979 /* XSCommon.h in Headers */,
+				5F18164420F7520A00D631B6 /* XSIQiYiPlayButton.swift in Headers */,
+				5F18164520F7521F00D631B6 /* XSExtesion+String.swift in Headers */,
+				5F18164620F7522200D631B6 /* XSExtension+UI.swift in Headers */,
+				5F18164720F7522600D631B6 /* XSExtension+NSObject.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +324,7 @@
 				5F0E224B20E91DD800095979 /* XSExtension+NSObject.swift in Sources */,
 				5FC33D5820F3143100FED5E8 /* KeychainConfiguration.swift in Sources */,
 				5F0E224720E91DB900095979 /* XSExtesion+String.swift in Sources */,
+				5F18164320F751FC00D631B6 /* XSIQiYiPlayButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
