@@ -67,7 +67,7 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
     
     
     
-    func createUI(status : IQiYiPlayStatus) {
+    private func createUI(status : IQiYiPlayStatus) {
         addTriangleLayer()
         addLeftLineLayer()
         addRightLineLayer()
@@ -75,7 +75,7 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
         buttonStatus = status
     }
     
-    func addTriangleLayer() {
+    private func addTriangleLayer() {
         let a = self.bounds.size.width
         let path = UIBezierPath()
         path.move(to: CGPoint(x: a * 0.2, y: a * 0.2))
@@ -96,7 +96,7 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
         
     }
     
-    func addLeftLineLayer () {
+    private func addLeftLineLayer () {
         let a = self.bounds.size.width
         let path = UIBezierPath()
         path.move(to: CGPoint(x: a * 0.2, y: 0))
@@ -113,7 +113,7 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
         
     }
     
-    func addRightLineLayer() {
+    private func addRightLineLayer() {
         let a = self.bounds.size.width
         let path = UIBezierPath()
         path.move(to: CGPoint(x: a * 0.8, y: a))
@@ -129,7 +129,7 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
         self.layer.addSublayer(rightLineLayer)
     }
     
-    func addCircleLayer() {
+    private func addCircleLayer() {
         let a = self.bounds.size.width
         let path = UIBezierPath()
         path.move(to: CGPoint(x: a * 0.8, y: a * 0.8))
@@ -148,7 +148,7 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
     
     
     //MARK: 执行动画 暂停->播放
-    func actionPositionAnimation() {
+    private func actionPositionAnimation() {
         strokeEndAnimationFrom(fromValue: 0, toValue: 1, layer: triangleLayer, animationName: TriangleAnimation, duration: AnimationDuration, delegate: self)
         
         strokeEndAnimationFrom(fromValue: 1, toValue: 0, layer: rightLineLayer, animationName: RightLineAnimation, duration: AnimationDuration / 4, delegate: self)
@@ -166,7 +166,7 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
     
     
     //MARK: 执行动画 播放 -> 暂停
-    func actionInverseAnimation() {
+    private func actionInverseAnimation() {
         strokeEndAnimationFrom(fromValue: 1, toValue: 0, layer: triangleLayer, animationName: TriangleAnimation, duration: AnimationDuration, delegate: self)
         
         strokeEndAnimationFrom(fromValue: 0, toValue: 1, layer: leftLineLayer, animationName: nil, duration: AnimationDuration / 2, delegate: nil)
@@ -190,7 +190,7 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
     /**
      通用执行strokeEnd动画
      */
-    func strokeEndAnimationFrom(fromValue : CGFloat, toValue : CGFloat, layer : CALayer, animationName : String? = nil, duration : CGFloat, delegate : CAAnimationDelegate? = nil) {
+    private func strokeEndAnimationFrom(fromValue : CGFloat, toValue : CGFloat, layer : CALayer, animationName : String? = nil, duration : CGFloat, delegate : CAAnimationDelegate? = nil) {
         
         let strokeEndAnimation = CABasicAnimation(keyPath: "strokeEnd")
         strokeEndAnimation.duration = CFTimeInterval(duration)
@@ -206,7 +206,7 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
     /**
      画弧改变起始位置动画
      */
-    func circleStartAnimationFrom(fromValue : CGFloat, toValue : CGFloat) {
+    private func circleStartAnimationFrom(fromValue : CGFloat, toValue : CGFloat) {
         let circleAnimation = CABasicAnimation(keyPath: "strokeStart")
         circleAnimation.duration = CFTimeInterval(AnimationDuration/4)
         circleAnimation.fromValue = fromValue
@@ -217,7 +217,7 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
     }
     
     //MARK: 动画 开始，结束代理方法
-    func animationDidStart(_ anim: CAAnimation) {
+    internal func animationDidStart(_ anim: CAAnimation) {
         let name = anim.value(forKey: "animationName") as! String
         if name == TriangleAnimation {
             triangleLayer.lineCap = kCALineCapRound
@@ -226,7 +226,7 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
         }
     }
     
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+    internal func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         let name = anim.value(forKey: "animationName") as! String
         if buttonStatus == IQiYiPlayStatus.IQiYiPlayStatusPlay && name == RightLineAnimation {
             rightLineLayer.lineCap = kCALineCapButt
@@ -236,13 +236,13 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
     }
     
     
-    func LineWidth() -> CGFloat {
+    private func LineWidth() -> CGFloat {
         return self.bounds.width * 0.2
     }
     
     
     //MARK: 暂停-》播放竖线动画
-    func linePositiveAnimation() {
+    private func linePositiveAnimation() {
         let a = self.bounds.size.width;
         
         // 左侧缩放动画
@@ -277,7 +277,7 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
     }
     
     //MARK: 播放-》暂停竖线动画
-    func lineInverseAnimation() {
+    private func lineInverseAnimation() {
         let a = self.bounds.size.width
         
         let leftPath1 = UIBezierPath()
@@ -311,7 +311,7 @@ class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
     /**
      通用path动画方法
      */
-    func pathAnimationWithDuration(duration : CGFloat) -> CABasicAnimation {
+    private func pathAnimationWithDuration(duration : CGFloat) -> CABasicAnimation {
         let pathAnimation = CABasicAnimation(keyPath: "path")
         pathAnimation.duration = CFTimeInterval(duration)
         pathAnimation.fillMode = kCAFillModeForwards

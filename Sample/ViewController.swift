@@ -8,13 +8,16 @@
 
 import UIKit
 import XSCommon
-import SnapKit
+//import SnapKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.randomColor
+        
+        let button = XSIQiYiPlayButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100), status: .IQiYiPlayStatusPlay, color: UIColor.randomColor)
+        view.addSubview(button)
         
     }
 

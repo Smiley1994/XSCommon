@@ -18,7 +18,7 @@ extension String {
      - returns: 字符串数组
      */
     
-    public func matchesForRegex(regex: String) -> [String]? {
+    func matchesForRegex(regex: String) -> [String]? {
         do {
             let regularExpression = try NSRegularExpression(pattern: regex, options: [])
             let range = NSMakeRange(0, self.count)
