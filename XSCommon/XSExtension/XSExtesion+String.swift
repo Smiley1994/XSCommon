@@ -18,7 +18,7 @@ extension String {
      - returns: 字符串数组
      */
     
-    func matchesForRegex(regex: String) -> [String]? {
+    public func matchesForRegex(regex: String) -> [String]? {
         do {
             let regularExpression = try NSRegularExpression(pattern: regex, options: [])
             let range = NSMakeRange(0, self.count)
@@ -44,7 +44,7 @@ extension String {
      
      - returns: Int
      */
-    func int32Value() ->Int32{
+    public func int32Value() ->Int32{
         return NSString(string: self).intValue
     }
     
@@ -53,7 +53,7 @@ extension String {
      
      - returns: Bool
      */
-    func boolValue() ->Bool{
+    public func boolValue() ->Bool{
         return NSString(string: self).boolValue
     }
     
@@ -62,7 +62,7 @@ extension String {
      
      - returns: Int
      */
-    func integerValue() ->Int{
+    public func integerValue() ->Int{
         return NSString(string: self).integerValue
     }
     
@@ -71,7 +71,7 @@ extension String {
      
      - returns: float
      */
-    func floatValue() ->Float{
+    public func floatValue() ->Float{
         return NSString(string: self).floatValue
     }
     
@@ -80,7 +80,7 @@ extension String {
      
      - returns: CGFloat
      */
-    func CGFloatValue() ->CGFloat{
+    public func CGFloatValue() ->CGFloat{
         return CGFloat(self.floatValue())
     }
     
@@ -89,7 +89,7 @@ extension String {
      
      - returns: double
      */
-    func doubleValue() ->Double{
+    public func doubleValue() ->Double{
         return NSString(string: self).doubleValue
     }
     
@@ -98,7 +98,7 @@ extension String {
      
      - returns: String
      */
-    func substring(_ range:NSRange) ->String {
+    public func substring(_ range:NSRange) ->String {
         
         return NSString(string: self).substring(with: range)
     }
@@ -108,7 +108,7 @@ extension String {
      
      - returns: String
      */
-    func pathExtension() ->String {
+    public func pathExtension() ->String {
         
         return NSString(string: self).pathExtension
     }
@@ -118,7 +118,7 @@ extension String {
      
      - returns: String
      */
-    func lastPathComponent() ->String {
+    public func lastPathComponent() ->String {
         
         return NSString(string: self).lastPathComponent
     }
@@ -128,13 +128,13 @@ extension String {
 
      - returns: String
      */
-    func stringByDeletingPathExtension() ->String {
+    public func stringByDeletingPathExtension() ->String {
         
         return NSString(string: self).deletingPathExtension
     }
     
     /// 计算字符串大小
-    func size(font:UIFont,constrainedToSize:CGSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)) ->CGSize {
+    public func size(font:UIFont,constrainedToSize:CGSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)) ->CGSize {
         
         let string:NSString = self as NSString
         
@@ -142,7 +142,7 @@ extension String {
     }
     
     /// 替换字符
-    func replacing(pattern:String, template:String) ->String {
+    public func replacing(pattern:String, template:String) ->String {
         
         if isEmpty {return self}
         
@@ -155,7 +155,7 @@ extension String {
     }
     
     /// 正则搜索相关字符位置
-    func matches(pattern:String) ->[NSTextCheckingResult] {
+    public func matches(pattern:String) ->[NSTextCheckingResult] {
         
         if isEmpty {return []}
         
@@ -168,7 +168,7 @@ extension String {
     }
     
     /// 是否存在正则匹配到的内容
-    func isExist(pattern:String) ->Bool {
+    public func isExist(pattern:String) ->Bool {
         
         let result:[NSTextCheckingResult] = matches(pattern: pattern)
         
@@ -177,7 +177,7 @@ extension String {
     
     
     /// 时间戳转时间
-    func date() ->String {
+    public func date() ->String {
         let currentDate = Date()
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "yyyyMMddHHmmss"

@@ -10,12 +10,11 @@ import Foundation
 import UIKit
 
 /**
- 可以在cell 内部获取cell 的父视图（UITableView && UICollectionView）
+ 可以在cell 内部获取cell的父视图（UITableView && UICollectionView）
  */
-
 extension UITableViewCell {
     
-    func superTableView() -> UITableView? {
+    public func superTableView() -> UITableView? {
         for view in sequence(first: self.superview, next: { $0?.superview }) {
             if let tableView = view as? UITableView {
                 return tableView
@@ -24,9 +23,8 @@ extension UITableViewCell {
         return nil
     }
 }
-
 extension UICollectionViewCell {
-    func superCollectionView() -> UICollectionView? {
+    public func superCollectionView() -> UICollectionView? {
         for view in sequence(first: self.superview, next: { $0?.superview }) {
             if let tableView = view as? UICollectionView {
                 return tableView
@@ -41,7 +39,7 @@ extension UIImage {
     /**
      *  重设图片大小
      */
-    func reSizeImage(reSize:CGSize)->UIImage {
+    public func reSizeImage(reSize:CGSize)->UIImage {
         UIGraphicsBeginImageContextWithOptions(reSize,false,UIScreen.main.scale);
         self.draw(in: CGRect(x: 0, y: 0, width: reSize.width, height: reSize.height))
         let reSizeImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!;
@@ -64,6 +62,9 @@ extension UIColor {
         }
     }
     
+    /**
+     *  十六进制颜色
+     */
     public class func hexColor(hexString: String, alpha: CGFloat? = 1.0) -> UIColor {
         
         var cString = hexString.trimmingCharacters(in:.whitespacesAndNewlines).uppercased()

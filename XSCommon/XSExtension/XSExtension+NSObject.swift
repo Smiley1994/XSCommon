@@ -14,7 +14,7 @@ extension NSObject {
     // MARK: -- 对象属性处理
     
     /// 获取对象的所有属性名称
-    func allPropertyNames() ->[String] {
+    public func allPropertyNames() ->[String] {
         
         // 这个类型可以使用CUnsignedInt,对应Swift中的UInt32
         var count: UInt32 = 0
@@ -43,7 +43,7 @@ extension NSObject {
     }
     
     /// 获取对象的所有属性名称跟值
-    func allPropertys() ->[String : Any?] {
+    public func allPropertys() ->[String : Any?] {
         
         var dict:[String : Any?] = [String : Any?]()
         
