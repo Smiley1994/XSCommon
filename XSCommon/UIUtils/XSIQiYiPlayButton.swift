@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum IQiYiPlayStatus : Int {
+public enum IQiYiPlayStatus : Int {
     case IQiYiPlayStatusPause = 0
     case IQiYiPlayStatusPlay
 }
@@ -24,7 +24,7 @@ let RightLineAnimation = "RightLineAnimation"
 
 public class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
 
-    var buttonStatus : IQiYiPlayStatus! {
+    public var buttonStatus : IQiYiPlayStatus! {
         didSet {
             if isAnimation == true {return}
             
@@ -59,7 +59,7 @@ public class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
     var circleLayer : CAShapeLayer!
     
     
-    init(frame : CGRect, status : IQiYiPlayStatus, color : UIColor? = UIColor.white) {
+    public init(frame : CGRect, status : IQiYiPlayStatus, color : UIColor? = UIColor.white) {
         super.init(frame: frame)
         LineColor = color
         createUI(status : status)
@@ -67,7 +67,7 @@ public class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
     
     
     
-    private func createUI(status : IQiYiPlayStatus) {
+    func createUI(status : IQiYiPlayStatus) {
         addTriangleLayer()
         addLeftLineLayer()
         addRightLineLayer()
