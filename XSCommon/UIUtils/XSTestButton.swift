@@ -8,14 +8,14 @@
 
 import UIKit
 
-class XSTestButton: UIButton {
+public class XSTestButton: UIButton {
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
