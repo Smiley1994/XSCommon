@@ -184,6 +184,14 @@ extension String {
         let dateString = timeFormatter.string(from: currentDate)
         return dateString
     }
+}
+
+extension NSAttributedString{
     
+    /// 计算多态字符串的size
+    public func size(constrainedToSize:CGSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)) ->CGSize{
+        
+        return self.boundingRect(with: constrainedToSize, options: [NSStringDrawingOptions.usesLineFragmentOrigin,NSStringDrawingOptions.usesFontLeading], context: nil).size
+    }
 }
 
