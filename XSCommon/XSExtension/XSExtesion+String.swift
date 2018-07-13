@@ -35,7 +35,7 @@ extension String {
      
      - returns: Int
      */
-    var length:Int {
+    public var length:Int {
         get{return (self as NSString).length}
     }
     
