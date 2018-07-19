@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 /**
  可以在cell 内部获取cell的父视图（UITableView && UICollectionView）
@@ -56,6 +57,25 @@ extension UIImage {
         let tintedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return tintedImage!
+    }
+    
+    // 获取视频缩略图
+    public func videoPreviewImage(videoUrl : String) -> UIImage {
+        let asset = AVURLAsset(url: URL(string: videoUrl)!)
+        let gen = AVAssetImageGenerator(asset: asset)
+        gen.appliesPreferredTrackTransform = true
+        gen.maximumSize = CGSize(width: 300, height: 300)
+        let time = CMTimeMakeWithSeconds(1.0, 600)
+
+        var actualTime = CMTime()
+        do {
+            let image = try gen.copyCGImage(at: time, actualTime: &actualTime)
+            let thumb = UIImage(cgImage: image)
+            return thumb
+        } catch {
+            let placeHoldImage = UIImage(named: "")
+            return placeHoldImage!
+        }
     }
 }
 
