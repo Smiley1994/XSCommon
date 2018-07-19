@@ -184,6 +184,19 @@ extension String {
         let dateString = timeFormatter.string(from: currentDate)
         return dateString
     }
+    
+    //将原始的url编码为合法的url
+     public func urlEncoded() -> String {
+        let encodeUrlString = self.addingPercentEncoding(withAllowedCharacters:
+            .urlQueryAllowed)
+        return encodeUrlString ?? ""
+    }
+    
+    //将编码后的url转换回原始的url
+    public func urlDecoded() -> String {
+        return self.removingPercentEncoding ?? ""
+    }
+    
 }
 
 extension NSAttributedString{
