@@ -77,6 +77,25 @@ extension UIImage {
             return placeHoldImage!
         }
     }
+    
+    // MARK: 截屏
+    /// 获得截屏视图（无值获取当前Window）
+    public func ScreenCapture(_ view:UIView? = nil, _ isSave:Bool = false) ->UIImage {
+        
+        let captureView = (view ?? (UIApplication.shared.keyWindow ?? UIApplication.shared.windows.first))!
+        
+        UIGraphicsBeginImageContextWithOptions(captureView.frame.size, false, 0.0)
+        
+        captureView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        if isSave { UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil) }
+        
+        return image!
+    }
 }
 
 

@@ -21,6 +21,7 @@
 		5F51558A20EC741B003230D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F51558920EC741B003230D9 /* Assets.xcassets */; };
 		5F51558D20EC741B003230D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F51558B20EC741B003230D9 /* LaunchScreen.storyboard */; };
 		5F51559320EC788A003230D9 /* XSScanBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51559220EC788A003230D9 /* XSScanBackgroundView.swift */; };
+		5F66A0CA2108A66300FAA4A8 /* ArchiveMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F66A0C92108A66300FAA4A8 /* ArchiveMethod.swift */; };
 		5FC33D5620F313F600FED5E8 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC33D5420F313F500FED5E8 /* KeychainPasswordItem.swift */; };
 		5FC33D5820F3143100FED5E8 /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC33D5720F3143100FED5E8 /* KeychainConfiguration.swift */; };
 		5FC33D5B20F3177500FED5E8 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC33D5A20F3177500FED5E8 /* SnapKit.framework */; };
@@ -67,6 +68,7 @@
 		5F51558C20EC741B003230D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F51558E20EC741B003230D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F51559220EC788A003230D9 /* XSScanBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSScanBackgroundView.swift; sourceTree = "<group>"; };
+		5F66A0C92108A66300FAA4A8 /* ArchiveMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveMethod.swift; sourceTree = "<group>"; };
 		5FC33D5220F313DD00FED5E8 /* Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sample.entitlements; sourceTree = "<group>"; };
 		5FC33D5420F313F500FED5E8 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		5FC33D5720F3143100FED5E8 /* KeychainConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainConfiguration.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		5F0E223C20E91BF000095979 /* XSCommon */ = {
 			isa = PBXGroup;
 			children = (
+				5F66A0C82108A5F600FAA4A8 /* DataMethod */,
 				5FC33D5120F3118700FED5E8 /* Keychain */,
 				5F18165E20F8634600D631B6 /* Other */,
 				5F0E225820E9429C00095979 /* ScanView */,
@@ -174,6 +177,14 @@
 				5F51558E20EC741B003230D9 /* Info.plist */,
 			);
 			path = Sample;
+			sourceTree = "<group>";
+		};
+		5F66A0C82108A5F600FAA4A8 /* DataMethod */ = {
+			isa = PBXGroup;
+			children = (
+				5F66A0C92108A66300FAA4A8 /* ArchiveMethod.swift */,
+			);
+			path = DataMethod;
 			sourceTree = "<group>";
 		};
 		5FC33D5120F3118700FED5E8 /* Keychain */ = {
@@ -316,6 +327,7 @@
 				5F0E225A20E942B800095979 /* XSScanViewController.swift in Sources */,
 				5F0E224920E91DCA00095979 /* XSExtension+UI.swift in Sources */,
 				5F51559320EC788A003230D9 /* XSScanBackgroundView.swift in Sources */,
+				5F66A0CA2108A66300FAA4A8 /* ArchiveMethod.swift in Sources */,
 				5FC33D5F20F31E3800FED5E8 /* ANN9PostDevice.swift in Sources */,
 				5FC33D5620F313F600FED5E8 /* KeychainPasswordItem.swift in Sources */,
 				5F0E224B20E91DD800095979 /* XSExtension+NSObject.swift in Sources */,
