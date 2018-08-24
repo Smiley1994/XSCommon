@@ -23,7 +23,7 @@ let RightLineAnimation = "RightLineAnimation"
 
 
 public class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
-
+    
     public var buttonStatus : IQiYiPlayStatus! {
         didSet {
             if isAnimation == true {return}
