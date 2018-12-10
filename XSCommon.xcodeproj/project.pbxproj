@@ -11,7 +11,6 @@
 		5F0E224720E91DB900095979 /* XSExtesion+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E224620E91DB900095979 /* XSExtesion+String.swift */; };
 		5F0E224920E91DCA00095979 /* XSExtension+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E224820E91DCA00095979 /* XSExtension+UI.swift */; };
 		5F0E224B20E91DD800095979 /* XSExtension+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E224A20E91DD800095979 /* XSExtension+NSObject.swift */; };
-		5F0E225A20E942B800095979 /* XSScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E225920E942B800095979 /* XSScanViewController.swift */; };
 		5F18164320F751FC00D631B6 /* XSIQiYiPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F18164220F751FB00D631B6 /* XSIQiYiPlayButton.swift */; };
 		5F18164820F75A7A00D631B6 /* XSIQiYiPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F18164220F751FB00D631B6 /* XSIQiYiPlayButton.swift */; };
 		5F18164B20F76E4500D631B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51558420EC741A003230D9 /* ViewController.swift */; };
@@ -21,11 +20,10 @@
 		5F51558820EC741A003230D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F51558620EC741A003230D9 /* Main.storyboard */; };
 		5F51558A20EC741B003230D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F51558920EC741B003230D9 /* Assets.xcassets */; };
 		5F51558D20EC741B003230D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F51558B20EC741B003230D9 /* LaunchScreen.storyboard */; };
-		5F51559320EC788A003230D9 /* XSScanBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51559220EC788A003230D9 /* XSScanBackgroundView.swift */; };
 		5F66A0CA2108A66300FAA4A8 /* ArchiveMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F66A0C92108A66300FAA4A8 /* ArchiveMethod.swift */; };
 		5FC33D5620F313F600FED5E8 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC33D5420F313F500FED5E8 /* KeychainPasswordItem.swift */; };
 		5FC33D5820F3143100FED5E8 /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC33D5720F3143100FED5E8 /* KeychainConfiguration.swift */; };
-		5FC33D5B20F3177500FED5E8 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC33D5A20F3177500FED5E8 /* SnapKit.framework */; };
+		5FC33D5B20F3177500FED5E8 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC33D5A20F3177500FED5E8 /* SnapKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		5FC33D5D20F3179600FED5E8 /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FC33D5A20F3177500FED5E8 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5FC33D5F20F31E3800FED5E8 /* ANN9PostDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC33D5E20F31E3800FED5E8 /* ANN9PostDevice.swift */; };
 /* End PBXBuildFile section */
@@ -42,13 +40,13 @@
 		};
 		5FC33D5C20F3178C00FED5E8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
 				5FC33D5D20F3179600FED5E8 /* SnapKit.framework in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -59,7 +57,6 @@
 		5F0E224620E91DB900095979 /* XSExtesion+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XSExtesion+String.swift"; sourceTree = "<group>"; };
 		5F0E224820E91DCA00095979 /* XSExtension+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XSExtension+UI.swift"; sourceTree = "<group>"; };
 		5F0E224A20E91DD800095979 /* XSExtension+NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XSExtension+NSObject.swift"; sourceTree = "<group>"; };
-		5F0E225920E942B800095979 /* XSScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSScanViewController.swift; sourceTree = "<group>"; };
 		5F18164220F751FB00D631B6 /* XSIQiYiPlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XSIQiYiPlayButton.swift; sourceTree = "<group>"; };
 		5F45B8F6212FFE62006CC3B0 /* XSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSConstants.swift; sourceTree = "<group>"; };
 		5F51558020EC741A003230D9 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +66,6 @@
 		5F51558920EC741B003230D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F51558C20EC741B003230D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F51558E20EC741B003230D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5F51559220EC788A003230D9 /* XSScanBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSScanBackgroundView.swift; sourceTree = "<group>"; };
 		5F66A0C92108A66300FAA4A8 /* ArchiveMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveMethod.swift; sourceTree = "<group>"; };
 		5FC33D5220F313DD00FED5E8 /* Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sample.entitlements; sourceTree = "<group>"; };
 		5FC33D5420F313F500FED5E8 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
@@ -124,7 +120,6 @@
 				5F66A0C82108A5F600FAA4A8 /* DataMethod */,
 				5FC33D5120F3118700FED5E8 /* Keychain */,
 				5F18165E20F8634600D631B6 /* Other */,
-				5F0E225820E9429C00095979 /* ScanView */,
 				5F18164120F74FC500D631B6 /* UIUtils */,
 				5F0E224520E91C4200095979 /* XSExtension */,
 			);
@@ -139,15 +134,6 @@
 				5F0E224A20E91DD800095979 /* XSExtension+NSObject.swift */,
 			);
 			path = XSExtension;
-			sourceTree = "<group>";
-		};
-		5F0E225820E9429C00095979 /* ScanView */ = {
-			isa = PBXGroup;
-			children = (
-				5F0E225920E942B800095979 /* XSScanViewController.swift */,
-				5F51559220EC788A003230D9 /* XSScanBackgroundView.swift */,
-			);
-			path = ScanView;
 			sourceTree = "<group>";
 		};
 		5F18164120F74FC500D631B6 /* UIUtils */ = {
@@ -335,9 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F0E225A20E942B800095979 /* XSScanViewController.swift in Sources */,
 				5F0E224920E91DCA00095979 /* XSExtension+UI.swift in Sources */,
-				5F51559320EC788A003230D9 /* XSScanBackgroundView.swift in Sources */,
 				5F45B8F7212FFE62006CC3B0 /* XSConstants.swift in Sources */,
 				5F66A0CA2108A66300FAA4A8 /* ArchiveMethod.swift in Sources */,
 				5FC33D5F20F31E3800FED5E8 /* ANN9PostDevice.swift in Sources */,
@@ -508,7 +492,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = N87RCZ5LLU;
+				DEVELOPMENT_TEAM = NV9J896P7F;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -541,7 +525,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = N87RCZ5LLU;
+				DEVELOPMENT_TEAM = NV9J896P7F;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
