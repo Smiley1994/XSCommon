@@ -8,7 +8,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "XSCommon"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
+  s.swift_version = '4.0'
   s.license      = 'MIT'
   s.summary      = "common method"
   s.homepage     = "https://github.com/Smiley1994/XSCommon"

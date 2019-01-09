@@ -73,7 +73,7 @@ extension UIImage {
             let thumb = UIImage(cgImage: image)
             return thumb
         } catch {
-            let placeHoldImage = UIImage(named: "")
+            let placeHoldImage = UIImage(named: "占位图")
             return placeHoldImage!
         }
     }
