@@ -23,9 +23,9 @@ class ViewController: UIViewController {
 //        imageView.image = UIImage().videoPreviewImage(videoUrl: "http://117.48.217.172/Gh6HiK7UF4g.mp4")
 //        view.addSubview(imageView)
         
-        let circle = XSAnimationCircleView(frame: CGRect(x: 100, y: 400, width: 60, height: 60))
-        
-        self.view.addSubview(circle)
+//        let circle = XSAnimationCircleView(frame: CGRect(x: 100, y: 400, width: 60, height: 60))
+//        
+//        self.view.addSubview(circle)
         
         
         
