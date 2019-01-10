@@ -65,7 +65,7 @@ extension UIImage {
         let gen = AVAssetImageGenerator(asset: asset)
         gen.appliesPreferredTrackTransform = true
         gen.maximumSize = CGSize(width: 300, height: 300)
-        let time = CMTimeMakeWithSeconds(1.0, 600)
+        let time = CMTimeMakeWithSeconds(1.0, preferredTimescale: 600)
 
         var actualTime = CMTime()
         do {
@@ -98,7 +98,9 @@ extension UIImage {
     }
 }
 
-
+/*
+ * UIColor Extesion
+ */
 extension UIColor {
     /**
      *  随机颜色

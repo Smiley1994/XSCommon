@@ -10,6 +10,7 @@ import Foundation
 
 //当前系统版本
 public let Version = (UIDevice.current.systemVersion as NSString).floatValue
+
 public let ProjectName = Bundle.main.infoDictionary!["CFBundleDisplayName"]!
 
 

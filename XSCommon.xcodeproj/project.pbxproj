@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F08B3E821E6209700A56558 /* XSFitDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F08B3E721E6209700A56558 /* XSFitDevice.swift */; };
+		5F08B3F521E72F7F00A56558 /* XSAnimationCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F08B3F421E72F7F00A56558 /* XSAnimationCircleView.swift */; };
+		5F08B3F621E735ED00A56558 /* XSAnimationCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F08B3F421E72F7F00A56558 /* XSAnimationCircleView.swift */; };
 		5F0E223F20E91BF000095979 /* XSCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F0E223D20E91BF000095979 /* XSCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F0E224720E91DB900095979 /* XSExtesion+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E224620E91DB900095979 /* XSExtesion+String.swift */; };
 		5F0E224920E91DCA00095979 /* XSExtension+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E224820E91DCA00095979 /* XSExtension+UI.swift */; };
@@ -51,6 +54,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5F08B3E721E6209700A56558 /* XSFitDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSFitDevice.swift; sourceTree = "<group>"; };
+		5F08B3F421E72F7F00A56558 /* XSAnimationCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSAnimationCircleView.swift; sourceTree = "<group>"; };
 		5F0E223A20E91BF000095979 /* XSCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XSCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F0E223D20E91BF000095979 /* XSCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSCommon.h; sourceTree = "<group>"; };
 		5F0E223E20E91BF000095979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				5F18164220F751FB00D631B6 /* XSIQiYiPlayButton.swift */,
+				5F08B3F421E72F7F00A56558 /* XSAnimationCircleView.swift */,
 			);
 			path = UIUtils;
 			sourceTree = "<group>";
@@ -158,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				5F45B8F6212FFE62006CC3B0 /* XSConstants.swift */,
+				5F08B3E721E6209700A56558 /* XSFitDevice.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -265,10 +272,11 @@
 				TargetAttributes = {
 					5F0E223920E91BF000095979 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1010;
 					};
 					5F51557F20EC741A003230D9 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 0;
@@ -325,11 +333,13 @@
 				5F45B8F7212FFE62006CC3B0 /* XSConstants.swift in Sources */,
 				5F66A0CA2108A66300FAA4A8 /* ArchiveMethod.swift in Sources */,
 				5FC33D5F20F31E3800FED5E8 /* ANN9PostDevice.swift in Sources */,
+				5F08B3E821E6209700A56558 /* XSFitDevice.swift in Sources */,
 				5FC33D5620F313F600FED5E8 /* KeychainPasswordItem.swift in Sources */,
 				5F0E224B20E91DD800095979 /* XSExtension+NSObject.swift in Sources */,
 				5FC33D5820F3143100FED5E8 /* KeychainConfiguration.swift in Sources */,
 				5F0E224720E91DB900095979 /* XSExtesion+String.swift in Sources */,
 				5F18164320F751FC00D631B6 /* XSIQiYiPlayButton.swift in Sources */,
+				5F08B3F521E72F7F00A56558 /* XSAnimationCircleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +349,7 @@
 			files = (
 				5F18164B20F76E4500D631B6 /* ViewController.swift in Sources */,
 				5F51558320EC741A003230D9 /* AppDelegate.swift in Sources */,
+				5F08B3F621E735ED00A56558 /* XSAnimationCircleView.swift in Sources */,
 				5F18164820F75A7A00D631B6 /* XSIQiYiPlayButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,7 +524,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -545,7 +556,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Smiley.XSCommon;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -568,7 +579,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Smiley.Sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -591,7 +602,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Smiley.Sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
