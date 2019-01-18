@@ -24,6 +24,8 @@
 		5F51558A20EC741B003230D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F51558920EC741B003230D9 /* Assets.xcassets */; };
 		5F51558D20EC741B003230D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F51558B20EC741B003230D9 /* LaunchScreen.storyboard */; };
 		5F66A0CA2108A66300FAA4A8 /* ArchiveMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F66A0C92108A66300FAA4A8 /* ArchiveMethod.swift */; };
+		5F998EE921F1B0A20088FEDB /* UIView(Extension).swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F998EE821F1B0A20088FEDB /* UIView(Extension).swift */; };
+		5F998EEB21F1BCD80088FEDB /* XSScreenFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F998EEA21F1BCD80088FEDB /* XSScreenFit.swift */; };
 		5FC33D5620F313F600FED5E8 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC33D5420F313F500FED5E8 /* KeychainPasswordItem.swift */; };
 		5FC33D5820F3143100FED5E8 /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC33D5720F3143100FED5E8 /* KeychainConfiguration.swift */; };
 		5FC33D5B20F3177500FED5E8 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC33D5A20F3177500FED5E8 /* SnapKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -72,6 +74,8 @@
 		5F51558C20EC741B003230D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F51558E20EC741B003230D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F66A0C92108A66300FAA4A8 /* ArchiveMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveMethod.swift; sourceTree = "<group>"; };
+		5F998EE821F1B0A20088FEDB /* UIView(Extension).swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView(Extension).swift"; sourceTree = "<group>"; };
+		5F998EEA21F1BCD80088FEDB /* XSScreenFit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XSScreenFit.swift; sourceTree = "<group>"; };
 		5FC33D5220F313DD00FED5E8 /* Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sample.entitlements; sourceTree = "<group>"; };
 		5FC33D5420F313F500FED5E8 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		5FC33D5720F3143100FED5E8 /* KeychainConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainConfiguration.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 		5F0E224520E91C4200095979 /* XSExtension */ = {
 			isa = PBXGroup;
 			children = (
+				5F998EE821F1B0A20088FEDB /* UIView(Extension).swift */,
 				5F0E224620E91DB900095979 /* XSExtesion+String.swift */,
 				5F0E224820E91DCA00095979 /* XSExtension+UI.swift */,
 				5F0E224A20E91DD800095979 /* XSExtension+NSObject.swift */,
@@ -146,6 +151,7 @@
 			children = (
 				5F18164220F751FB00D631B6 /* XSIQiYiPlayButton.swift */,
 				5F08B3F421E72F7F00A56558 /* XSAnimationCircleView.swift */,
+				5F998EEA21F1BCD80088FEDB /* XSScreenFit.swift */,
 			);
 			path = UIUtils;
 			sourceTree = "<group>";
@@ -330,10 +336,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F0E224920E91DCA00095979 /* XSExtension+UI.swift in Sources */,
+				5F998EEB21F1BCD80088FEDB /* XSScreenFit.swift in Sources */,
 				5F45B8F7212FFE62006CC3B0 /* XSConstants.swift in Sources */,
 				5F66A0CA2108A66300FAA4A8 /* ArchiveMethod.swift in Sources */,
 				5FC33D5F20F31E3800FED5E8 /* ANN9PostDevice.swift in Sources */,
 				5F08B3E821E6209700A56558 /* XSFitDevice.swift in Sources */,
+				5F998EE921F1B0A20088FEDB /* UIView(Extension).swift in Sources */,
 				5FC33D5620F313F600FED5E8 /* KeychainPasswordItem.swift in Sources */,
 				5F0E224B20E91DD800095979 /* XSExtension+NSObject.swift in Sources */,
 				5FC33D5820F3143100FED5E8 /* KeychainConfiguration.swift in Sources */,

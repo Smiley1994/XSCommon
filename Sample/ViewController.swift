@@ -28,7 +28,6 @@ class ViewController: UIViewController {
 //        self.view.addSubview(circle)
         
         
-        
     }
 
     override func didReceiveMemoryWarning() {
