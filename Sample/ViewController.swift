@@ -26,8 +26,10 @@ class ViewController: UIViewController {
 //        let circle = XSAnimationCircleView(frame: CGRect(x: 100, y: 400, width: 60, height: 60))
 //        
 //        self.view.addSubview(circle)
+
         
-        
+        print(percentageWithScreenHeight())
+        print(percentageWithScreenWidth())
     }
 
     override func didReceiveMemoryWarning() {

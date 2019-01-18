@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XSFitDevice: NSObject {
+public class XSFitDevice: NSObject {
 
     static let IS_IPHONE : String = "IS_IPHONE"
     static let IS_IPHONEX : String = "IS_IPHONEX"

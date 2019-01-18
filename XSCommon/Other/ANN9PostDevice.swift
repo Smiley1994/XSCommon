@@ -95,7 +95,7 @@ class ANN9PostDevice: NSObject {
         dictionaryInfo.setValue(operatorInforation(key: 1), forKey: "mnc")
         dictionaryInfo.setValue(operatorInforation(key: 2), forKey: "carrierName")
         
-        dictionaryInfo.setValue(iphoneType(), forKey: "Platform")
+//        dictionaryInfo.setValue(iphoneType(), forKey: "Platform")
         
 //        dictionaryInfo.setValue(ScreenWidth, forKey: "screenWidth")
 //        dictionaryInfo.setValue(ScreenHeight, forKey: "screenHeight")
