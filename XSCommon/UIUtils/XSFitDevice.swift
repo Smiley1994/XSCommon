@@ -48,7 +48,7 @@ public class XSFitDevice: NSObject {
         if platform == "iPhone11,2" { return "iPhoneXS"}
         if platform == "iPhone11,6" { return "iPhoneXSMax"}
         
-        if platform == "iPad5,1" || platform == "Pad5,2" { return "iPadMini4"}
+        if platform == "iPad5,1" || platform == "iPad5,2" || platform == "iPad4,4" { return "iPad"}
         if platform == "iPad5,3" || platform == "iPad5,4" { return "iPadAir2"}
         if platform == "iPad6,3" || platform == "iPad6,4" { return "iPadPro9.7"}
         if platform == "iPad6,7" || platform == "iPad6,8" { return "iPadPro12.9"}
@@ -58,6 +58,14 @@ public class XSFitDevice: NSObject {
         if platform == "x86_64" { return "iPhone Simulator"}
         
         return platform
+    }
+    
+    public class func isIPad() ->Bool {
+        if iphoneType().contains("iPad"){
+            return true
+        } else {
+            return false
+        }
     }
     
 }
