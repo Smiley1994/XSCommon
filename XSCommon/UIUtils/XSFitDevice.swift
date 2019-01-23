@@ -68,4 +68,12 @@ public class XSFitDevice: NSObject {
         }
     }
     
+    public class func isIPhoneX() ->Bool {
+        if iphoneType().contains("X"){
+            return true
+        } else {
+            return false
+        }
+    }
+    
 }

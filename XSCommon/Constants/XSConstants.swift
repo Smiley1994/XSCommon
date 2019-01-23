@@ -20,21 +20,16 @@ public let ScreenWidth:CGFloat = UIScreen.main.bounds.size.width
 /// 屏幕高度
 public let ScreenHeight:CGFloat = UIScreen.main.bounds.size.height
 
-/// iPhone X
-public let isX:Bool = (ScreenHeight == CGFloat(812) && ScreenWidth == CGFloat(375))
 
-/// iPhone 6p 7p 8p
-public let isiPhonePlus = (ScreenHeight == CGFloat(736) && ScreenWidth == CGFloat(414))
-
-/// iPhone 6 7 8
-public let isiPhone = (ScreenHeight == CGFloat(667) && ScreenWidth == CGFloat(375))
-
+let isX = XSFitDevice.isIPhoneX();
 
 /// 导航栏高度
 public let NavgationBarHeight:CGFloat = isX ? 88 : 64
 
 /// TabBar高度
-public let TabBarHeight:CGFloat = 49
+public let TabBarHeight:CGFloat = isX ? 83 : 49
 
-/// iPhone X 顶部刘海高度
-public let TopLiuHeight:CGFloat = 30
+/// iPhone 顶部SafeArea
+public let TopSafeAreaHeight:CGFloat = isX ? 44 : 20
+/// iPhone 底部SafeArea
+public let BottomSafeAreaHeight:CGFloat = isX ? 34 : 0
