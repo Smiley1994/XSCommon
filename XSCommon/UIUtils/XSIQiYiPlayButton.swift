@@ -23,7 +23,7 @@ let RightLineAnimation = "RightLineAnimation"
 
 
 public class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
-
+    
     public var buttonStatus : IQiYiPlayStatus! {
         didSet {
             if isAnimation == true {return}
@@ -89,8 +89,8 @@ public class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
         triangleLayer.fillColor = UIColor.clear.cgColor
         triangleLayer.strokeColor = LineColor.cgColor
         triangleLayer.lineWidth = LineWidth()
-        triangleLayer.lineCap = kCALineCapButt
-        triangleLayer.lineJoin = kCALineJoinRound
+        triangleLayer.lineCap = CAShapeLayerLineCap.butt
+        triangleLayer.lineJoin = CAShapeLayerLineJoin.round
         triangleLayer.strokeEnd = 0
         self.layer .addSublayer(triangleLayer)
         
@@ -107,8 +107,8 @@ public class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
         leftLineLayer.fillColor = UIColor.clear.cgColor
         leftLineLayer.strokeColor = LineColor.cgColor
         leftLineLayer.lineWidth = LineWidth()
-        leftLineLayer.lineCap = kCALineCapRound
-        leftLineLayer.lineJoin = kCALineJoinRound
+        leftLineLayer.lineCap = CAShapeLayerLineCap.round
+        leftLineLayer.lineJoin = CAShapeLayerLineJoin.round
         self.layer.addSublayer(leftLineLayer)
         
     }
@@ -124,8 +124,8 @@ public class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
         rightLineLayer.fillColor = UIColor.clear.cgColor
         rightLineLayer.strokeColor = LineColor.cgColor
         rightLineLayer.lineWidth = LineWidth()
-        rightLineLayer.lineCap = kCALineCapRound
-        rightLineLayer.lineJoin = kCALineJoinRound
+        rightLineLayer.lineCap = CAShapeLayerLineCap.round
+        rightLineLayer.lineJoin = CAShapeLayerLineJoin.round
         self.layer.addSublayer(rightLineLayer)
     }
     
@@ -140,8 +140,8 @@ public class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
         circleLayer.fillColor = UIColor.clear.cgColor
         circleLayer.strokeColor = LineColor.cgColor
         circleLayer.lineWidth = LineWidth()
-        circleLayer.lineCap = kCALineCapRound
-        circleLayer.lineJoin = kCALineJoinRound
+        circleLayer.lineCap = CAShapeLayerLineCap.round
+        circleLayer.lineJoin = CAShapeLayerLineJoin.round
         circleLayer.strokeEnd = 0
         self.layer.addSublayer(circleLayer)
     }
@@ -196,7 +196,7 @@ public class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
         strokeEndAnimation.duration = CFTimeInterval(duration)
         strokeEndAnimation.fromValue = fromValue
         strokeEndAnimation.toValue = toValue
-        strokeEndAnimation.fillMode = kCAFillModeForwards
+        strokeEndAnimation.fillMode = CAMediaTimingFillMode.forwards
         strokeEndAnimation.isRemovedOnCompletion = false
         strokeEndAnimation.setValue(animationName, forKey: "animationName")
         strokeEndAnimation.delegate = delegate
@@ -211,7 +211,7 @@ public class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
         circleAnimation.duration = CFTimeInterval(AnimationDuration/4)
         circleAnimation.fromValue = fromValue
         circleAnimation.toValue = toValue
-        circleAnimation.fillMode = kCAFillModeForwards
+        circleAnimation.fillMode = CAMediaTimingFillMode.forwards
         circleAnimation.isRemovedOnCompletion = false
         circleLayer.add(circleAnimation, forKey: nil)
     }
@@ -220,18 +220,18 @@ public class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
     public func animationDidStart(_ anim: CAAnimation) {
         let name = anim.value(forKey: "animationName") as! String
         if name == TriangleAnimation {
-            triangleLayer.lineCap = kCALineCapRound
+            triangleLayer.lineCap = CAShapeLayerLineCap.round
         } else if name == RightLineAnimation {
-            rightLineLayer.lineCap = kCALineCapRound
+            rightLineLayer.lineCap = CAShapeLayerLineCap.round
         }
     }
     
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         let name = anim.value(forKey: "animationName") as! String
         if buttonStatus == IQiYiPlayStatus.IQiYiPlayStatusPlay && name == RightLineAnimation {
-            rightLineLayer.lineCap = kCALineCapButt
+            rightLineLayer.lineCap = CAShapeLayerLineCap.butt
         } else if name == TriangleAnimation {
-            triangleLayer.lineCap = kCALineCapButt
+            triangleLayer.lineCap = CAShapeLayerLineCap.butt
         }
     }
     
@@ -314,7 +314,7 @@ public class XSIQiYiPlayButton: UIButton,CAAnimationDelegate {
     private func pathAnimationWithDuration(duration : CGFloat) -> CABasicAnimation {
         let pathAnimation = CABasicAnimation(keyPath: "path")
         pathAnimation.duration = CFTimeInterval(duration)
-        pathAnimation.fillMode = kCAFillModeForwards
+        pathAnimation.fillMode = CAMediaTimingFillMode.forwards
         pathAnimation.isRemovedOnCompletion = false
         return pathAnimation
     }
